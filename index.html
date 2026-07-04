@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Ember Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Allen Ember Eye - Fire Detector System</h1>
+        <p id="subtext">Detects fire | Trigger Alert Alarm | Sends Alert Message</p>
+        <div class="menu-container">
+            <div class="menu">
+                <a href="/" class="menu-button selected">Video Upload</a>
+                <a href="/realtime" class="menu-button">Realtime Monitoring</a>
+            </div>
+        </div>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="upload-area">
+                <input type="file" name="file" id="file-input" class="file-input">
+                <button class="browse-button" type="button" onclick="document.getElementById('file-input').click()">Browse</button>
+            </div>
+            <button class="upload-button" type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

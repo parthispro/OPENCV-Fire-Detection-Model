@@ -1,0 +1,24 @@
+# 1. Global Text Normalization
+* text=auto eol=lf
+
+# 2. Python Code and Configurations
+*.py text eol=lf
+*.pyi text eol=lf
+requirements.txt text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+
+# 3. Documentation & Data
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.csv text eol=lf
+
+# 4. FIX GITHUB LANGUAGE STATISTICS (Ignore Frontend Boilerplate)
+# This forces GitHub to ignore these files when calculating the repo language
+*.css linguist-vendored
+*.html linguist-vendored
+*.js linguist-vendored
+static/* linguist-vendored
+templates/* linguist-vendored

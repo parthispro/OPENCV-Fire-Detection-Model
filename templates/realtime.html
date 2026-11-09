@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Allen Ember Eye - Fire Detector System</h1>
+        <p id="subtext">Detects fire | Trigger Alert Alarm | Sends Alert Message</p>
+        <div class="menu-container">
+            <div class="menu">
+                <a href="/" class="menu-button">Video Upload</a>
+                <a href="/realtime" class="menu-button selected">Realtime Monitoring</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            {% if streaming %}
+            <h3>Live Camera Feed</h3>
+            <div style="margin: 20px auto; max-width: 640px;">
+                <img src="{{ url_for('webcam_feed') }}" style="width: 100%; border-radius: 12px; border: 2px solid #4CAF50; display: block;" alt="Live Camera Stream">
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="/realtime" class="browse-button" style="display: inline-block; width: auto; text-decoration: none; padding: 12px 30px; font-size: 16px;">Stop Monitoring</a>
+            </div>
+            {% else %}
+            <a href="/realtime?stream=1" class="upload-button" style="display: inline-block; text-decoration: none; width: auto; padding: 15px 40px;">Open Realtime Camera</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

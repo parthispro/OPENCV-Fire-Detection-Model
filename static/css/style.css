@@ -1,0 +1,112 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-family: 'Arial Black', sans-serif;
+}
+#subtext{
+    margin-top:-19px;
+    margin-bottom:30px;
+}
+
+.menu-container {
+    border: 2px solid #ccc; /* Common light color border */
+    border-radius: 20px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing */
+    display: inline-block; /* Make the container shrink to fit its content */
+}
+
+.menu {
+    overflow: hidden; /* Ensure border radius doesn't cut off inner elements */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: #4CAF50;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 16px;
+    text-decoration:none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.menu-button.selected {
+    background-color: #4CAF50; /* Selected button color */
+    color: #fff;
+}
+
+.menu-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 20px; /* Rounded corners on hover */
+}
+
+.upload-button,
+.browse-button {
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.file-input {
+    display: none;
+}
+
+.browse-button {
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+}

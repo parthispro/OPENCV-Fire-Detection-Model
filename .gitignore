@@ -1,0 +1,40 @@
+
+*.avi
+build/
+dist/
+.DS_Store
+*.egg
+*.egg-info/
+.eggs/
+.env
+env/
+.idea/
+# ── IDE / OS ──────────────────────────────────────────────
+*.log
+logs/
+# ── Logs ──────────────────────────────────────────────────
+*.mkv
+# ── ML model weights ──────────────────────────────────────
+*.mov
+*.mp4
+*.onnx
+*.pt
+*.pth
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+# ── Python ────────────────────────────────────────────────
+# ── Secrets ───────────────────────────────────────────────
+*.swo
+*.swp
+Thumbs.db
+uploads/
+# ── Uploads / temp files ──────────────────────────────────
+.venv/
+venv/
+# ── Virtual environments ───────────────────────────────────
+.vscode/
+*.weights
+*.whl
+yolo_env/

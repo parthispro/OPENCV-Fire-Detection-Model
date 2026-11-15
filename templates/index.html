@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Ember Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Allen Ember Eye - Fire Detector System</h1>
+        <p id="subtext">Detects fire | Trigger Alert Alarm | Sends Alert Message</p>
+        <div class="menu-container">
+            <div class="menu">
+                <a href="/" class="menu-button selected">Video Upload</a>
+                <a href="/realtime" class="menu-button">Realtime Monitoring</a>
+            </div>
+        </div>
+
+        {% if video_file %}
+        <div style="margin-top: 20px;">
+            <h3>Detection Feed ({{ video_file }})</h3>
+            <div style="margin: 20px auto; max-width: 640px;">
+                <img src="{{ url_for('video_feed', filename=video_file) }}" style="width: 100%; border-radius: 12px; border: 2px solid #4CAF50; display: block;" alt="Detection Stream">
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="/" class="browse-button" style="display: inline-block; width: auto; text-decoration: none; padding: 12px 30px; font-size: 16px;">Upload Another Video</a>
+            </div>
+        </div>
+        {% else %}
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="upload-area">
+                <input type="file" name="file" id="file-input" class="file-input" accept="video/*" onchange="document.getElementById('file-label').textContent = this.files[0] ? this.files[0].name : 'No file chosen'">
+                <button class="browse-button" type="button" onclick="document.getElementById('file-input').click()">Browse</button>
+                <p id="file-label" style="margin-top:10px; font-size:14px; color:#555;">No file chosen</p>
+            </div>
+            <button class="upload-button" type="submit">Upload</button>
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>
